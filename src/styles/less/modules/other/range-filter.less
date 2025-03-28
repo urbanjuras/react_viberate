@@ -1,0 +1,31 @@
+.range-filter {
+	.font-size(14);
+	line-height: 18px;
+	max-width: 300px;
+	font-family: @suiss-int-mono;
+
+	&.disabled {
+		.opacity(0.2);
+		.prevent-click();
+	}
+
+	.range-slider-value {
+		font-weight: bold;
+		color: @grey-1;
+		float: left;
+
+		&.active {
+			color: @black;
+		}
+	}
+	
+	.btn-range-slider {
+		font-family: @suiss-int-mono;
+		float: right;
+	}
+
+	.buttons {
+		.clearfix;
+		padding-bottom: 12px;
+	}
+}

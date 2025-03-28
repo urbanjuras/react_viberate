@@ -1,0 +1,169 @@
+body {
+	.font-size(@base-font-size);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: @base-font;
+	font-weight: 400;
+	line-height: @base-line-height;
+	color: @text-color;
+	letter-spacing: @base-letter-spacing;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	background-color: @white-1;
+
+	&.hide-chat {
+
+		#launcher {
+			display: none !important;
+		}
+	}
+
+	&.show-scroll-to-top {
+
+		.btn-scroll-to-top {
+			.translate(0,0);
+		}
+	}
+
+	&.has-mobile-filters {
+
+		.main {
+			z-index: 4;
+
+			@media @bp_768 {
+				z-index: unset;
+			}
+		}
+
+		#launcher {
+			z-index: 3;
+		}
+	}
+
+	&.media-player-toolbar-open {
+		
+		.container {
+			padding-bottom: 50px;
+		}
+
+		.media-player-toolbar {
+			.translate(0, 0);
+		}
+
+		.video-player {
+
+			&.fixed {
+				bottom: 54px;
+			}
+		}
+
+		.toolbar-filter-search {
+
+			@media @bp_768 {
+				bottom: 54px;
+			}
+		}
+	}
+
+	&.entity-detail-fixed {
+
+		.section-entity-detail-minimized {
+			.translate(0, 0);
+
+			&.artist,
+			&.country,
+			&.genre {
+				.translate(0, 50px);
+			
+				@media @bp_768 {
+					.translate(0, 60px);
+				}
+			}
+		}
+	}
+
+	&.on-scroll-fixed-btn {
+
+		.btn-blue-floater-cta {
+			.translate(0,0);
+		}
+
+		.main {
+			
+			@media @bp_768_max {
+				padding-bottom: 52px;
+			}
+		}
+	}
+
+	&.header-fixed {
+
+		.header,
+		.header-new {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+
+		.section-search-results {
+			padding-top: 30px + 50px;
+
+			@media @bp_1024 {
+				padding-top: 60px + 74px;
+			}
+		}
+
+		.toolbar {
+			top: 60px;
+
+			@media @bp_768 {
+				top: 70px;
+			}
+
+			@media @bp_1200 {
+				top: 90px;
+			}
+			
+			.section-entity-view-heading {
+				padding-top: 40 + 60px;
+
+				@media @bp_768 {
+					padding-top: 60px + 70px;
+				}
+
+				@media @bp_1200 {
+					padding-top: 60px + 90px;
+				}
+			}
+		}
+
+		.notifications-wrapper {
+			position: relative;
+			top: 40px;
+
+			@media @bp_768 {
+				top: @header-tablet-height;
+			}
+
+			@media @bp_1200 {
+				top: @header-desktop-height;
+			}
+		}
+	}
+
+	&.noise {
+		background-color: @black;
+		background-image: url(../images/gif/noise-animated-dark.gif);
+		background-repeat: repeat;
+		background-size: 400px;
+		background-position: center center;
+	}
+}

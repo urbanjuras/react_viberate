@@ -1,0 +1,16 @@
+.main {
+	position: relative;
+
+	&.main-search {
+		display: none;
+
+		&.show {
+			.animation(fade-in .3s linear 0s forwards);
+			display: block;
+
+			& + .main {
+				display: none;
+			}
+		}
+	}
+}

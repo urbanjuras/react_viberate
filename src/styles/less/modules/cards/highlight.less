@@ -1,0 +1,50 @@
+.card-highlight {
+	height: 250px;
+	color: @white;
+
+	@media @bp_1440 {
+		height: 290px;
+	}
+
+	figure {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	figcaption {
+		.font-size(26);
+		line-height: 30px;
+		font-weight: 500;
+		position: absolute;
+		left: 20px;
+		bottom: 30px;
+		right: 20px;
+		word-break: break-word;
+
+		@media @bp_768 {
+			.font-size(32);
+			line-height: 32px;
+		}
+
+		@media @bp_1024 {
+			.font-size(42);
+			line-height: 42px;
+		}
+
+		@media @bp_1200 {
+			.font-size(32);
+			line-height: 32px;
+		}
+
+		@media @bp_1440 {
+			.font-size(42);
+			line-height: 42px;
+		}
+	}
+}

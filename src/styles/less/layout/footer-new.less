@@ -1,0 +1,103 @@
+/*************** 1. Footer [.footer] ***************/
+
+.footer-new {
+	display: none;
+
+	@media @bp_1024 {
+		display: block;
+		background-color: @white-1;
+		padding: 50px 0 0 0;
+		text-align: left;
+		position: relative;
+	}
+
+	h4 {
+
+		@media @bp_1024 {
+			.font-size(12);
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			padding: 10px 30px 10px 0;
+			position: relative;
+			letter-spacing: 2px;
+			padding: 0 0 15px 0;
+		}
+	}
+
+	a {
+		color: @white;
+
+		&:hover,
+		&:active {
+			color: @blue-roll;
+		}
+
+		&.social-link {
+			.opacity(0.35);
+			display: inline-block;
+
+			& + .social-link {
+				margin-left: 8px;
+			}
+
+			&:hover {
+				.opacity(1);
+			}
+		}
+	}
+
+	.footer-menu {
+		.font-size(13);
+
+		li {
+			padding: 3px 0;
+		}
+
+		a {
+			color: @black;
+			font-weight: 300;
+
+			&:hover,
+			&:active {
+				color: @blue-roll;
+			}
+		}
+	}
+
+	.grid {
+
+		@media @bp_1024 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.grid-item {
+		position: relative;
+	}
+
+	.footnote {
+		.font-size(12);
+		background-color: @white;
+		color: #7d7d7d;
+		margin: 50px 0 0 0;
+
+		.page {
+			display: flex;
+			height: 50px;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		a {
+			color: #7d7d7d;
+
+			&:hover,
+			&:active {
+				color: @blue-roll;
+			}
+		}
+	}
+}
